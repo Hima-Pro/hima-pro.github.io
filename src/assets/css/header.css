@@ -1,0 +1,128 @@
+.header {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  gap: 20px;
+}
+
+.header nav {
+  backdrop-filter: blur(10px);
+  background: var(--secondary);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.33);
+  border-radius: 10px;
+  padding: 10px;
+  width: 60px;
+}
+
+.header nav.menu {
+  padding: 0 10px;
+}
+
+.header .menuItem {
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+  display: block;
+  color: var(--font);
+  border: 1px solid transparent;
+}
+
+.header .menuItem.active,
+.header .menuItem:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--colorAccent);
+}
+
+.header .menuItem .iconify {
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  padding: 5px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.header .menuItem .title {
+  background: var(--colorAccent);
+  color: #fff;
+  position: absolute;
+  width: max-content;
+  height: 30px;
+  line-height: 30px;
+  display: none;
+  padding: 0 15px;
+  border-radius: 5px 10px 10px 5px;
+  left: calc(100% + 5px);
+  margin-top: 5px;
+}
+
+.header .menuItem:hover .title {
+  display: inline-block;
+}
+
+.header .toggle {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 40px;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    gap: 0;
+  }
+  .header nav {
+    width: 100%;
+  }
+  .header nav.pages,
+  .header nav.extra {
+    display: none;
+    margin-top: 20px;
+  }
+
+  .header nav.pages.active,
+  .header nav.extra.active {
+    display: block;
+  }
+
+  .header .logo:hover {
+    background: none;
+    font-weight: normal;
+    color: var(--font);
+  }
+
+  .header .menuItem {
+    width: 100%;
+  }
+
+  .header .menuItem.active,
+  .header .menuItem:hover {
+    background: var(--primary);
+  }
+
+  .header .toggle,
+  .header .toggle:hover {
+    display: block;
+    width: 40px;
+  }
+
+  .header .menuItem .title {
+    display: inline-block;
+    background: none;
+    color: var(--font);
+    left: 50px;
+  }
+}

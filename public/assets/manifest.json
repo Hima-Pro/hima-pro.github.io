@@ -1,0 +1,35 @@
+{
+  "name": "Hima-Pro",
+  "short_name": "Hima-Pro",
+  "start_url": "../../index.html?installed=true",
+  "scope": "../../",
+  "id": "../../",
+  "display": "standalone",
+  "theme_color": "#313131",
+  "background_color": "#313131",
+  "description": "I am Ibrahim M. A. Megahed, I love chess, medicine, design and programming, Just a student in Russian Belgorod state university (НИУ БелГУ).",
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-light.png",
+      "sizes": "1080x2160",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/screenshot-dark.png",
+      "sizes": "1080x2160",
+      "type":"image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "../images/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
